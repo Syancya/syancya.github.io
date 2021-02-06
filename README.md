@@ -1,1 +1,0 @@
-# syancya.github.io
