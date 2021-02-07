@@ -34,6 +34,8 @@ github_username:  syancya
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
 
 locale: "uk-UA"
 
@@ -58,7 +60,7 @@ locale: "uk-UA"
 #   - vendor/ruby/
 
 # THEME SETTINGS
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.22.0
 
 search: true
 
