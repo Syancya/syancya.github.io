@@ -30,6 +30,10 @@ url: "https://syancya.github.io" # the base hostname & protocol for your site, e
 # twitter_username: jekyllrb
 github_username:  syancya
 
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
 # Build settings
 # theme: minima
 plugins:
@@ -38,6 +42,9 @@ plugins:
   - jekyll-include-cache
 
 locale: "uk-UA"
+
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -59,6 +66,7 @@ locale: "uk-UA"
 #   - vendor/gems/
 #   - vendor/ruby/
 
+
 # THEME SETTINGS
 remote_theme: mmistakes/minimal-mistakes@4.22.0
 
@@ -70,11 +78,37 @@ defaults:
       path: ""
       type: posts
     values:
+      layout: single
       show_date: true
       read_time: true
+      author_profile: false
 
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+
+# ANALYTICS
 analytics:
   provider: "google-gtag"
   google:
     tracking_id: "G-RG476W5RZP"
     anonymize_ip: false # default
+
+
+# AUTHOR
+author:
+  name   : "Оксана Єляшевська"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "My awesome biography constrained to a sentence or two goes here."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/syancya"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/oyeliashevska/"
